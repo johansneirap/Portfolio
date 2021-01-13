@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+:root{
+    --azulmarino: #0a192f;
+    --lightgreen: #64ffda;
+    --lightgray: #ccd6f6;
+    --graytitle: #a8b2d1;
+    --gray: #8892b0;
+    --brightyellow: rgb(255, 235, 59);
+    --hoverbtn:  #48d8b63f;
+}
+body {
+    background-color: var(--azulmarino);
+    height: 1000PX;
+}
+.content-section{
+    font-family: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+  background-color: var(--azulmarino);
+  color: var(--gray);
+  padding-left: 3%;
+  padding-top: 10%;
+}
+.left-sidebar{
+    color: var(--azulmarino);
+    font-family: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+    position: fixed;
+    bottom: 0px;
+    right: auto;
+    z-index: 10;
+}
+.left-sidebar a{
+    color: var(--lightgreen);
+    font-size: 30px;
+    vertical-align: middle;
+}
+.hi{
+    color: var(--lightgreen);
+}
+
+.bigh1 {
+    font-size: clamp(40px, 1vw, 80px);
+    font-weight: 900;
+    letter-spacing: -1px;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    animation: slide-in 1s cubic-bezier(.3, 0, .3, 1) both;
+  animation-delay: calc(60ms * var(--char-index));
+  color: saturate(lighten(#182952, 55%), 60%);
+}
+.bigh1::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 7px;
+    left: 0;
+    background: #9ea2ac75;
+    width: 100%;
+    height: 30%;
+}
+
+@keyframes slide-in {
+    from {
+      transform: translateY(1em);
+      opacity: 0;
+    }
+  }
+
+h2{
+    color: var(--graytitle);
+    margin: 0px;
+    font-size: clamp(40px, 1vw, 80px);
+    margin-bottom: 10px;
+}
+
+.about {
+    max-width: 550px;
+}
+
+.btn{
+    border: 0.5px solid var(--lightgreen);
+    color: var(--lightgreen);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.btn:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    background-color: var(--hoverbtn);
+    color: var(--lightgreen);
+}
+
+.make-me-sticky {
+	bottom: 0;
+  padding: 0 15px;
+}
+.make-me-sticky::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100px;
+    margin: 0px auto;
+    background-color: var(--lightgreen);
+}
+.make-me-sticky::before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100px;
+    margin: 0px auto;
+    margin-bottom: 15px;
+    background-color: var(--lightgreen);
+}
+
+.icon-bar {
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }

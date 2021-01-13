@@ -1,40 +1,37 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 :root{
-    --azulmarino: #0a192f;
-    --lightgreen: #64ffda;
+    --main-color: #0a192f;
+    /* --main-color: #6699FF; */
+    --secondary-color: #64ffda;
+    /* --secondary-color: #ffffff; */
     --lightgray: #ccd6f6;
     --graytitle: #a8b2d1;
     --gray: #8892b0;
+    --big-title: #fff;
     --brightyellow: rgb(255, 235, 59);
     --hoverbtn:  #48d8b63f;
+    --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
 }
 body {
-    background-color: var(--azulmarino);
+    background-color: var(--main-color);
     height: 1000PX;
+    padding-top: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
+/* Main content styles */
 .content-section{
     font-family: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
-  background-color: var(--azulmarino);
-  color: var(--gray);
-  padding-left: 3%;
-  padding-top: 10%;
+    background-color: var(--main-color);
+    color: var(--gray);
+    padding-left: 3%;
+    padding-top: 10%;
 }
-.left-sidebar{
-    color: var(--azulmarino);
-    font-family: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
-    position: fixed;
-    bottom: 0px;
-    right: auto;
-    z-index: 10;
-}
-.left-sidebar a{
-    color: var(--lightgreen);
-    font-size: 30px;
-    vertical-align: middle;
-}
+
 .hi{
-    color: var(--lightgreen);
+    color: var(--secondary-color);
+    font-family: 'Montserrat', sans-serif;
 }
 
 .bigh1 {
@@ -45,7 +42,7 @@ body {
     display: inline-block;
     text-transform: uppercase;
     text-align: center;
-    color: #fff;
+    color: var(--big-title);
     animation: slide-in 1s cubic-bezier(.3, 0, .3, 1) both;
   animation-delay: calc(60ms * var(--char-index));
   color: saturate(lighten(#182952, 55%), 60%);
@@ -80,15 +77,44 @@ h2{
 }
 
 .btn{
-    border: 0.5px solid var(--lightgreen);
-    color: var(--lightgreen);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: 0.5px solid var(--secondary-color);
+    color: var(--secondary-color);
+    font-family: 'Montserrat', sans-serif;
 }
 .btn:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
     background-color: var(--hoverbtn);
-    color: var(--lightgreen);
+    color: var(--secondary-color);
 }
-
+.frame-img img{
+  background: #fff;
+  border-radius: 5px;
+  display: inline-block;
+  height: 80%;
+  max-height: 280px;
+  max-width: 390px;
+  position: relative;
+  width: 80%;
+}
+/* Left sidebar styles */
+.left-sidebar{
+    color: var(--main-color);
+    font-family: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+    position: fixed;
+    bottom: 0px;
+    right: auto;
+    z-index: 10;
+}
+.left-sidebar a{
+    color: var(--secondary-color);
+    font-size: 30px;
+    vertical-align: middle;
+}
+.grow{
+    transition: all .2s ease-in-out;
+}
+.grow:hover{
+    transform: scale(1.3);
+}
 .make-me-sticky {
 	bottom: 0;
   padding: 0 15px;
@@ -99,7 +125,7 @@ h2{
     width: 2px;
     height: 100px;
     margin: 0px auto;
-    background-color: var(--lightgreen);
+    background-color: var(--secondary-color);
 }
 .make-me-sticky::before {
     content: "";
@@ -108,9 +134,9 @@ h2{
     height: 100px;
     margin: 0px auto;
     margin-bottom: 15px;
-    background-color: var(--lightgreen);
+    background-color: var(--secondary-color);
 }
-
+/* Barra de iconos en el sidebar */
 .icon-bar {
     position: fixed;
     top: 50%;
@@ -118,3 +144,40 @@ h2{
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
+
+  /* Navigation bar styles */
+.navbar{
+      color: var(--brightyellow);
+      padding: 5px 20px;
+      overflow: hidden;
+      background: var(--main-color);
+  }
+.nav-link{
+    color:var(--secondary-color);
+    font-family: 'Montserrat', sans-serif;
+    text-decoration-skip-ink: auto;
+    position: relative;
+    font-size: 20px;
+}
+.nav-link::after{
+    content: '';
+    position: absolute;
+    width: 0; height: 3px;
+    display: block;
+    margin-top: 1px;
+    right: 0;
+    background: var(--secondary-color);
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+}
+.nav-link:hover:after{
+    width: 100%;
+    left: 0;
+    background:var(--secondary-color);
+}
+.nav-link:hover{
+    color:var(--lightgray);
+}
+.nav-item{
+    padding:0 10px;
+}

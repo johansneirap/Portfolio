@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Leftsidebar = () => {
     return (
-        <div className="col-3 px-1 position-fixed" id="sticky-sidebar">
+        <div className="col-sidebar col-3 px-1 position-fixed" id="sticky-sidebar">
 
               <div className="left-sidebar ">
                   <div className="icon-bar make-me-sticky">

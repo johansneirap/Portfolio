@@ -8,7 +8,7 @@ export const PortfolioApp = () => {
   return (
     <>
       <Navbar />
-      <div class="container-fluid">
+      <div class="container-fluid" id="section1">
         <div className="row">
           <Leftsidebar />
           <Contentsection />

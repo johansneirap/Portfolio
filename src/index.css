@@ -247,6 +247,9 @@ p{
 .footer-icon ul li a{
     color: var(--lightgray);
 }
+.section1{
+    min-height: 60vh;
+}
 /* Media querys para estilos para celulares*/
 @media (max-width: 468px) { 
     .col-sidebar{

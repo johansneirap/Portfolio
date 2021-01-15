@@ -3,11 +3,11 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
 :root{
-    /* --main-color: #0a192f; */
-    --secondary-color:rgb(255, 235, 59);
+    --main-color: #0a192f;
+    /* --secondary-color:rgb(255, 235, 59); */
     /* --main-color: #6699FF; */
-    /* --secondary-color: #64ffda; */
-    --main-color: rgb(37, 26, 105);
+    --secondary-color: #64ffda;
+    /* --main-color: rgb(37, 26, 105); */
     /* --secondary-color: #ffffff; */
 
     --lightgray: #ccd6f6;
@@ -50,7 +50,7 @@ body {
     text-transform: uppercase;
     text-align: center;
     color: var(--big-title);
-    animation: slide-in 1s cubic-bezier(.3, 0, .3, 1) both;
+    /* animation: slide-in 1s cubic-bezier(.3, 0, .3, 1) both; */
   animation-delay: calc(60ms * var(--char-index));
   color: saturate(lighten(#182952, 55%), 60%);
 }
@@ -124,7 +124,7 @@ p{
 }
 .panel-section{
     margin-top: 10%;
-    padding-top: 100px;
+    padding-top: 150px;
 }
 
 /* Left sidebar styles */
@@ -258,12 +258,19 @@ p{
     .content-section{
         text-align: center;
         margin-left: 0;
-        padding-top: 126px;
+        padding-top: 80px;
     }
     .section2{
         padding-top: 136px;
+        text-align: center;
     }
-
+    
+}
+@media (max-width: 768px){
+    .img-container{
+        display: flex;
+        justify-content: center;
+    }
 }
 /* Media querys para Estilos para tablet y superiores */
 @media (min-width: 468px) { 

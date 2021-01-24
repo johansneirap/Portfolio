@@ -1,0 +1,101 @@
+:root{
+    --main-color: #0a192f;
+    /* --secondary-color:rgb(255, 235, 59); */
+    /* --main-color: #6699FF; */
+    --secondary-color: #64ffda;
+    /* --main-color: rgb(37, 26, 105); */
+    /* --secondary-color: #ffffff; */
+
+    --lightgray: #ccd6f6;
+    --graytitle: #a8b2d1;
+    --gray: #8892b0;
+    --big-title: #fff;
+    --brightyellow: rgb(255, 235, 59);
+    --hoverbtn:  #64ffdb3f;
+    --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    --logo-font:'Bad Script', cursive;
+    --title-font:  'Montserrat', sans-serif;
+    --open-sans: 'Open Sans', sans-serif;
+}
+  
+  .tabs {
+    width: 60%;
+    float: none;
+    list-style: none;
+    position: relative;
+    margin: 80px 0 0 10px;
+    text-align: left;
+  }
+  .tabs li {
+    float: left;
+    display: block;
+  }
+  .tabs input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+  }
+  .tabs label {
+    display: block;
+    padding: 14px 21px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: normal;
+    background: #110f27;
+    cursor: pointer;
+    position: relative;
+    top: 4px;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  .tabs label:hover {
+    background: #233554;
+  }
+  .tabs .tab-content {
+    z-index: 2;
+    display: none;
+    overflow: hidden;
+    width: 100%;
+    font-size: 80px;
+    line-height: 25px;
+    padding: 25px;
+    position: absolute;
+    top: 53px;
+    left: 0;
+    background: #112240;
+    border-radius: 10px;
+  }
+  .tabs .tab-content p{
+      font-size: 0.23em;
+  }
+
+  .tabs [id^="tab"]:checked + label {
+    top: 0;
+    padding-top: 17px;
+    background: #112240;
+  }
+  .tabs [id^="tab"]:checked ~ [id^="tab-content"] {
+    display: block;
+  }
+  
+  p.link {
+    clear: both;
+    margin: 380px 0 0 15px;
+  }
+  p.link a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #612e76;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+  p.link a:hover {
+    background-color: #522764;
+  }

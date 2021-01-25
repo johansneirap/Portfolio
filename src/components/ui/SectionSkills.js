@@ -5,7 +5,7 @@ export const SectionSkills = () => {
   return (
     <div className="panel-section section3" id="skills">
       <h1 data-splitting className="bigh1 section-title"> Habilidades</h1>
-      
+      <p>Work in progress...</p>
     </div>
   );
 };

@@ -324,11 +324,11 @@ p {
 .container {
     /* width: 60%; */
     /* height: 100%; */
-    display: flex;
+    /* display: flex; */
     /* flex-wrap: wrap; */
     /* justify-content: center; */
-    align-items: center;
-    margin: 0;
+    /* align-items: center; */
+    /* margin: 0; */
 }
 
 .skill-box {

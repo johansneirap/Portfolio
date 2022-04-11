@@ -4,4 +4,5 @@ Personal portfolio website, that includes:
 * Skills that I handle.
 * Hobbies.
 * Projects done.
+  * [Earthquake since 1900 Viz](https://johansneirap.github.io/dataviz/)
 
